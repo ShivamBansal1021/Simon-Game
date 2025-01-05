@@ -4,11 +4,11 @@ let playSeq = [];
 let started = false;
 
 let h4 = document.querySelector("h4");
-document.addEventListener("keypress", function () {
+let playBtn = document.querySelector(".play");
+playBtn.addEventListener("click", function () {
     if (started == false) {
-        
         started = true;
-
+        playBtn.classList.add("hidden");
         levelUp();
         flash();
     }
@@ -56,7 +56,7 @@ colorContainer.addEventListener("click", function (event) {
                 setTimeout(() => {
                     body.classList.remove("wrong");
                 }, 200); 
-                h4.innerText = `Game Over! Your score is ${level - 1}. Press any key to restart`;
+                h4.innerText = `Game Over! Your score is ${level - 1}. Click play button to restart`;
                 reset();
             }
         }
@@ -64,6 +64,7 @@ colorContainer.addEventListener("click", function (event) {
 })
 
 function reset(){
+    playBtn.classList.remove("hidden");
     started = false;
     level=0;
     playSeq = [];

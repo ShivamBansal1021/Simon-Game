@@ -6,6 +6,16 @@ body {
 .wrong{
   background-color: red;
 }
+.play{
+  width: 120px;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  z-index: 2;
+}
+.hidden{
+  display: none;
+}
 .container {
   display: flex;
   width: 400px;
@@ -40,6 +50,7 @@ i{
   line-height: 1;
 }
 .color-container {
+  position: relative;
   height: 400px;
   width: 400px;
   display: flex;
