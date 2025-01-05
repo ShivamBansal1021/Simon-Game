@@ -9,6 +9,7 @@ body {
 .play{
   width: 120px;
   position: absolute;
+  cursor: pointer;
   top: 35%;
   left: 35%;
   z-index: 2;
